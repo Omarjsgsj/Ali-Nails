@@ -1,0 +1,237 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Fondo blanco */
+}
+
+
+header {
+    background-color: black; /* Rosa */
+   
+    display: flex;
+    justify-content: space-around; /* Espacio entre el logo y el nav */
+    align-items: center;
+    
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-float i {
+    margin-top: 5px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo img {
+    width: 90px; /* Ajusta el tamaño del logo según tu necesidad */
+    margin-right: 10px;
+    border-radius: 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav ul {
+   list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Texto en blanco */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: cyan; /* Cambia de color al pasar el ratón sobre el enlace */
+}
+
+.imagen-fondo {
+    position: relative;
+    overflow: hidden;
+    text-align: left; /* Ajuste el texto a la izquierda */
+}
+
+.imagen-fondo .fondo {
+    width: 115%; /* Ajusta el fondo a la anchura completa del contenedor */
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca el fondo detrás del texto y otras imágenes */
+}
+
+.imagen-fondo .superposicion {
+    width: 40%; /* Ajusta el tamaño de la superposición según sea necesario */
+    height: 80%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0%; /* Ajusta la posición vertical según sea necesario */
+    left: 50%; /* Ajusta la posición horizontal según sea necesario */
+    z-index: 1; /* Coloca la superposición sobre el fondo */
+}
+
+.imagen-fondo h2 {
+    font-size: 36px;
+    margin: 0;
+    padding: 250px 170px; /* Ajusta el espaciado y margen según sea necesario */
+    color: #fff; /* Color del texto */
+    line-height: 1.5;
+}
+
+
+.titulo-texturizado {
+  font-size: 2em; /* Tamaño del texto */
+  color: transparent;
+  background: url('Imagen/degradado.PNG'); /* Ruta a la imagen de la textura */
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: 'Arial', sans-serif; /* Cambia a la fuente deseada */
+    text-align: center
+}
+
+
+.tarjetas-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.tarjeta {
+    background-color: black; /* Fondo blanco */
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+    margin-right: 20px;
+}
+
+.tarjeta i {
+    font-size: 60px; /* Tamaño del icono */
+    color: aliceblue; /* Color del icono (azul) */
+}
+
+.tarjeta h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: cyan; /* Color del título (negro) */
+}
+
+.tarjeta p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white; /* Color del texto (gris oscuro) */
+}
+
+#carouselExample img {
+    max-height: 450px; /* Ajusta la altura máxima según tus preferencias */
+    width: 60px; /* Para mantener la proporción de aspecto original */
+    margin: auto; /* Centra la imagen */
+    padding: 50px;
+  }
+
+
+.redes-sociales i {
+    font-size: 24px; /* Tamaño del icono */
+    color: #000; /* Color del icono */
+    margin: 5px; /* Espaciado alrededor de los iconos */
+}
+.footer {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten según el tamaño */
+}
+
+.footer .section {
+    max-width: 250px;
+    text-align: center;
+    margin: 10px; /* Añade un poco de margen alrededor de las secciones */
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
+.imagen-fondo .fondo {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .tarjetas-container {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .imagen-fondo .fondo {
+         width: 200%;
+          }
+    .imagen-fondo .superposicion {
+        width: 40%; /* Ajusta el tamaño de la superposición para pantallas pequeñas */
+        height: 60%;
+        top: 20%;
+        left: 80%;
+        transform: translateX(-50%); /* Centra la superposición horizontalmente */
+    }
+
+    .imagen-fondo h2 {
+        font-size: 20px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+        padding: 100px 20px; /* Ajusta el espaciado y margen para pantallas pequeñas */
+    }
+}
